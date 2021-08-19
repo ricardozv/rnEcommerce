@@ -19,6 +19,7 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 declare const global: {HermesInternal: null | {}};
 
@@ -34,6 +35,7 @@ const App = () => {
           {global.HermesInternal == null ? null : (
             <View style={styles.engine}>
               <Text style={styles.footer}>Engine: Hermes</Text>
+              <Icon name="rocket" size={30} color="#900" />;
             </View>
           )}
           <View style={styles.body}>
