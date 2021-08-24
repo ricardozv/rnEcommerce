@@ -1,29 +1,38 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image  } from 'react-native';
-
+import {  StyleSheet, ScrollView, View, Text, Image,  } from 'react-native';
 
 const HomeScreen = () => {
     return (
-        <View style= {styles.page}>
-        <View style ={styles.root}>  
-           
-            <View>
-                <Image style = {styles.image} source ={{uri:'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/products/cleanarchitecture.jpg' }} />
-            </View>
-            
-            <View style = {styles.rightContainer }> 
-                    <Text style ={ styles.title} numberOfLines ={3}>Produto duto duto duto duto duto duto duto </Text>{/* Render Product Component   /* Tela para renderização de componente */}
-                    <Text style ={ styles.price}>Por R$ 99.90</Text>
-            </View>
-        </View>
-        </View>
+        
+        <ScrollView style={styles.scrollView}>
+                <View style= {styles.page}>
+                <View style ={styles.root}>  
+                
+                    <View>
+                        <Image style = {styles.image} source ={{uri:'https://imagekank.s3.amazonaws.com/haineken.png' }} />
+                    </View>
+                    
+                    <View style = {styles.rightContainer }> 
+                            <Text style ={ styles.title} numberOfLines ={3}>Produto duto duto duto duto duto duto duto </Text>
+                            <Text style ={ styles.price}>Por R$ 99.90</Text>
+                    </View>
+                </View>
+                </View>
+        
+        </ScrollView>
+     
     );
 };
 
 const styles = StyleSheet.create({
+    scrollView: {
+    backgroundColor: 'pink',
+
+  },
+  
     page: {
         width: '100%',
-        padding: 10,
+        padding: 5,
     },
     root: {
         flexDirection: 'row',
@@ -43,14 +52,17 @@ const styles = StyleSheet.create({
         padding: 15,
         width: '100%'
     },
+
     title: {
         fontSize: 18,
         width: '50%'
        
     },
     price: {
-       
-    }
-})
+      fontSize: 22,
+    },
+   
+}); 
 
-export default HomeScreen;
+export default HomeScreen;  
+
